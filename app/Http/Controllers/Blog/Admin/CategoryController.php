@@ -5,18 +5,30 @@ namespace App\Http\Controllers\Blog\Admin;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Models\BlogCategory;
+use App\Repositories\BlogCategoryRepository;
 use Illuminate\Support\Str;
-
+/**
+ * Управление категориями блога
+ * 
+ * @package App\Http\Controllers\Blog\Admin
+ */
 class CategoryController extends BaseController
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @var BlogCategoryRepository
      */
+    private $BlogCategoryRepository;
+
+    public function __construct() 
+    {
+        parent::__construct();
+        $this->BlogCategoryRepository = app(BlogCategoryRepository::class);
+    }
+
     public function index()
     {
-        $paginator = BlogCategory::paginate(5);
+        // $paginator = BlogCategory::paginate(5);
+        $paginator = $this->BlogCategoryRepository->getAllWithPaginate(3);
         return view('blog.admin.categories.index', compact('paginator'));
     }
 
@@ -28,8 +40,7 @@ class CategoryController extends BaseController
     public function create()
     {
         $item = new BlogCategory();
-        // dd($item);
-        $categoryList = BlogCategory::all();
+        $categoryList = $this->BlogCategoryRepository->getForComboBox();
 
         return view('blog.admin.categories.edit', compact('item', 'categoryList'));
     }
@@ -63,10 +74,16 @@ class CategoryController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, BlogCategoryRepository $categoryRepository)
     {
-        $item = BlogCategory::findOrFail($id);
-        $categoryList = BlogCategory::all();
+        // $item = BlogCategory::findOrFail($id);
+        // $categoryList = BlogCategory::all();
+        $item = $categoryRepository->getEdit($id);
+        $categoryList = $categoryRepository->getForComboBox();
+        
+        if (empty($item)) {
+            abort(404);
+        }
 
         return view('blog.admin.categories.edit',
             compact('item', 'categoryList'));
