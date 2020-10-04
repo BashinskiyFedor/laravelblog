@@ -15,5 +15,6 @@ class BlogCategory extends Model
             'slug',
             'parent_id',
             'description',
+            'id',
         ];
 }

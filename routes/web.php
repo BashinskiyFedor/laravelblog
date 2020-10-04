@@ -33,8 +33,12 @@ $groupData = [
     'prefix' => 'admin/blog',
 ];
 Route::group($groupData, function () {
-    $methods = ['index', 'edit', 'store', 'update', 'create',];
+    $methods = ['index', 'edit', 'store', 'update', 'create', 'show'];
     Route::resource('categories', 'CategoryController')
         ->only($methods)
         ->names('blog.admin.categories');
+
+    Route::resource('posts', 'PostController')
+        ->except(['show'])
+        ->names('blog.admin.posts');
 });

@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-    @php
-        /** @var \App\Models\BlogCategory $item */
-    @endphp
-    @if($item->exists)
-        <form method="POST" action="{{ route('blog.admin.categories.update', $item->id) }}">
-        @method('PATCH')
-    @else
-        <form method="POST" action="{{ route('blog.admin.categories.store') }}">
-    @endif
-
-        @csrf
         <div class="container">
+            @php
+            /** @var \App\Models\BlogCategory $item */
+            @endphp
+            @if($item->exists)
+                <form method="POST" action="{{ route('blog.admin.categories.update', $item->id) }}">
+                @method('PATCH')
+            @else
+                <form method="POST" action="{{ route('blog.admin.categories.store') }}">
+            @endif
+        
+            @csrf
             @php
             /** @var \Illuminate\Support\ViewErrorBug $errors */
             @endphp
@@ -41,8 +41,6 @@
                     </div>
                 </div>
             @endif
-        </div>
-        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     @include('blog.admin.categories.includes.item_edit_main_col')

@@ -1,8 +1,9 @@
 @php
     /** @var \App\Models\BlogCategory $item */
+    /** @var \App\Models\BlogCategory $categoryList */
 @endphp
 <div class="row justify-content-center">
-    <div class="col-md-12">
+    <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
                 <div class="card-title"></div>
@@ -35,7 +36,7 @@
 
                         <div class="form-group">
                             <label for="parent_id">Родитель</label>
-                            <select name="parent_id" value="{{ $item->slug }}"
+                            <select name="parent_id"
                                    id="parent_id"
                                    type="text"
                                    class="form-control"
@@ -43,10 +44,7 @@
                                    required
                             >
                                 @foreach($categoryList as $categoryOption)
-                                    <option value="{{ $categoryOption->id }}" 
-                                        @if($categoryOption->id == $item->id) selected @endif>
-                                        {{ $categoryOption->id_title }}
-                                    </option>
+                                        <option value="{{ $categoryOption->id }}">{{ $categoryOption->id_title }}</option>
                                 @endforeach
                             </select>
                         </div>

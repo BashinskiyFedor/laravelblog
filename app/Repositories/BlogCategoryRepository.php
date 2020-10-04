@@ -42,7 +42,7 @@ class BlogCategoryRepository extends CoreRepository
             'CONCAT (id, ". ", title) AS id_title',
         ]);
 
-        $result[] = $this
+        $result = $this
             ->startConditions()
             ->selectRaw($columns)
             ->toBase()
