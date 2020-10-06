@@ -29,10 +29,10 @@
                         </thead>
                         <tbody>
                             @foreach($paginator as $post)
-                                <tr>
+                                <tr @if(!$post->is_published) style="background-color: #ccc;" @endif>
                                     <td>{{ $post->id }}</td>
-                                <td>{{ $post->user_id }}</td>
-                                    <td>{{$post->category_id}}</td>
+                                    <td>{{ $post->user->name }}</td>
+                                    <td>{{$post->category->title}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="{{ route('blog.admin.posts.edit', $post->id)}}">{{ $post->title }}</a>
                                     </td>
