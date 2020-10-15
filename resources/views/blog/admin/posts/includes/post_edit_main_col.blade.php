@@ -82,7 +82,7 @@
                         <div class="form-check">
                             <input name="is_published"
                                     type="hidden"
-                                    value="0"
+                                    value="1"
                             >
                             <input name="is_published"
                                     type="checkbox"
