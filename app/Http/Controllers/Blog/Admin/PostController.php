@@ -96,16 +96,8 @@ class PostController extends BaseController
                     ->withErrors(['msg' => "Запись id=[{$id}] не найдена"])
                     ->withInput();
         }
-
+        
         $data = $request->all();
-
-        if (empty($data['slug'])) {
-            $data['slug'] = Str::slug($data['title']);
-        }
-
-        if (empty($data['published_at']) && $data['is_published']) {
-            $data['published_at'] = Carbon::now();
-        }
 
         $result = $item->update($data);
 

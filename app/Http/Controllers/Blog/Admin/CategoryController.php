@@ -80,7 +80,6 @@ class CategoryController extends BaseController
         // $categoryList = BlogCategory::all();
         $item = $categoryRepository->getEdit($id);
         $categoryList = $categoryRepository->getForComboBox();
-        // dd('categ', $categoryList);
         
         if (empty($item)) {
             abort(404);
