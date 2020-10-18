@@ -4,8 +4,10 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
 
 // Font
-@import 'fonts/flaticon/font/flaticon';
+// @import './fonts/flaticon.scss';
+@import './fonts/flaticon.css';
 // Greenhouse
 @import 'greenhouse';

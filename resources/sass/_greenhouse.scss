@@ -5,10 +5,12 @@ $white: #fff;
 $black: #000000;
 $darken: #232931;
 
-$primary: #fc5e28;
+$primary: #7bd695;
 $secondary: #040e26;
 
-
+.flaticon {
+	font-weight: 400;
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -155,7 +157,7 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light {
 	background: transparent !important;
 	position: absolute;
-	top: 160px;
+	top: 180px;
 	left: 0;
 	right:0;
 	z-index: 3;

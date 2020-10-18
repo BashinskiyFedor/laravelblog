@@ -4,7 +4,7 @@
             <div class="col-md-4 d-flex mb-2 mb-md-0">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
                     <span class="flaticon flaticon-crane"></span>
-                    <span class="ml-2">Wilcon <small>Construction Company</small></span>
+                    <span class="ml-2">GreenHouse Yard<small>Construction Company</small></span>
                 </a>
             </div>
             <div class="col-md-4 d-flex topper mb-md-0 mb-2 align-items-center">
@@ -12,16 +12,16 @@
                     <span class="fa fa-map"></span>
                 </div>
                 <div class="pr-md-4 pl-md-3 pl-3 text">
-                    <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
-                    <p class="con">Call Us Now 24/7 Customer Support</p>
+                    <p class="con"><span>Наш номер</span> <span>8-962-300-37-33</span></p>
+                    <p class="con">Позвоните нам сейчас 24/7 Служба поддержки клиентов</p>
                 </div>
             </div>
             <div class="col-md-4 d-flex topper mb-md-0 align-items-center">
                 <div class="icon d-flex justify-content-center align-items-center"><span class="fa fa-paper-plane"></span>
                 </div>
                 <div class="text pl-3 pl-md-3">
-                    <p class="hr"><span>Our Location</span></p>
-                    <p class="con">198 West 21th Street, Suite 721 New York NY 10016</p>
+                    <p class="hr"><span>Наше местоположение</span></p>
+                    <p class="con">г. Белгород, ул. 45-Стрелковой дивизии</p>
                 </div>
             </div>
         </div>
@@ -34,14 +34,14 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item active"><a href="project.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">О нас</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item active"><a href="project.html" class="nav-link">Проекты</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Блог</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Связаться с нами</a></li>
             </ul>
-            <a href="#" class="btn-custom" data-toggle="modal" data-target="#exampleModalCenter">Inquire Now</a>
+            <a href="#" class="btn-custom" data-toggle="modal" data-target="#exampleModalCenter">Узнать больше</a>
         </div>
     </div>
 </nav>

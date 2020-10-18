@@ -22,7 +22,7 @@
 				<div class="col-md-6 py-5 pl-md-5">
 					<div class="row justify-content-center mb-4 pt-md-4">
 						<div class="col-md-12 heading-section ftco-animate">
-							<span class="subheading">Welcome to Wilcon</span>
+							<span class="subheading">Добро пожаловать в GREENHOUSE YARD</span>
 							<h2 class="mb-4">Wilcon A Construction Company</h2>
 							<div class="d-flex about">
 								<div class="icon"><span class="flaticon-hammer"></span></div>

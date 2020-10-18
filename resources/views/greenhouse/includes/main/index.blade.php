@@ -4,9 +4,9 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center">
             <div class="col-lg-6 ">
                 <div class="mt-5">
-                    <h1 class="mb-4">We Build <br>Great Projects</h1>
+                    <h1 class="mb-4">Мы строим<br><span>отличные теплицы</span></h1>
                     <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-                    <p><a href="#" class="btn btn-primary">Our Services</a> <a href="#" class="btn btn-white">Request A Quote</a></p>
+                    <p><a href="#" class="btn btn-primary">Наши услуги</a> <a href="#" class="btn btn-white">Акции</a></p>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-engineer-1"></span></div>
                     <div class="media-body pl-4">
-                        <h3 class="heading mb-3">Quality Construction</h3>
+                        <h3 class="heading mb-3">Качественный монтаж</h3>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                 </div>      
@@ -29,7 +29,7 @@
                 <div class="media block-6 services services-2 d-flex">
                     <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-worker-1"></span></div>
                     <div class="media-body pl-4">
-                        <h3 class="heading mb-3">Professional Liability</h3>
+                        <h3 class="heading mb-3">Индивидуальный подход</h3>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                 </div>      
@@ -38,7 +38,7 @@
                 <div class="media block-6 services d-flex">
                     <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-engineer"></span></div>
                     <div class="media-body pl-4">
-                        <h3 class="heading mb-3">Dedicated To Our Clients</h3>
+                        <h3 class="heading mb-3">Довольные клиенты</h3>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                 </div>      
@@ -58,18 +58,20 @@
             <div class="col-md-6 py-5 pl-md-5">
                 <div class="row justify-content-center mb-4 pt-md-4">
                     <div class="col-md-12 heading-section ">
-                        <span class="subheading">Welcome to Wilcon</span>
-                        <h2 class="mb-4">Wilcon A Construction Company</h2>
+                        <span class="subheading">Добро пожаловать в GREENHOUSE YARD</span>
+                        <h2 class="mb-4">GREENHOUSE YARD</h2>
                         <div class="d-flex about">
                             <div class="icon"><span class="flaticon-hammer"></span></div>
-                            <h3>We're in this business since 1975 and We provide the best insdustrial services</h3>
+                            <h3>
+                                Мы работаем в этом бизнесе с 1975 года и предоставляем лучшие промышленные услуги.
+                            </h3>
                         </div>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                         <div class="d-flex video-image align-items-center mt-md-4">
                             <a href="#" class="video img d-flex align-items-center justify-content-center" style="background-image: url(images/about-2.jpg);">
                                 <span class="fa fa-play-circle"></span>
                             </a>
-                            <h4 class="ml-4">This is how we work on our clients, Watch video</h4>
+                            <h4 class="ml-4">Вот как мы работаем с нашими клиентами, Смотрите видео</h4>
                         </div>
                     </div>
                 </div>
@@ -84,9 +86,9 @@
             <div class="col-md-12 text-center">
                 <div class="img"  style="background-image: url(images/bg_2.jpg);">
                     <div class="overlay"></div>
-                    <h2>Providing Personalized and High Quality Services</h2>
+                    <h2>ПРЕДОСТАВЛЕНИЕ ИНДИВИДУАЛЬНЫХ И КАЧЕСТВЕННЫХ УСЛУГ</h2>
                     <p>We can manage your dream building A small river named Duden flows by their place</p>
-                    <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Request A Quote</a></p>
+                    <!--<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Request A Quote</a></p>-->
                 </div>
             </div>
         </div>
@@ -97,8 +99,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section ">
-                <span class="subheading">Our Services</span>
-                <h2 class="mb-4">We Offer Services</h2>
+                <span class="subheading">Наши услуги</span>
+                <h2 class="mb-4">Мы предлагаем услуги</h2>
             </div>
         </div>
         <div class="row">
@@ -107,9 +109,9 @@
                     <div class="img" style="background-image: url(images/services-1.jpg);"></div>
                     <div class="text">
                         <div class="icon"><span class="flaticon-architect"></span></div>
-                        <h2>Architecture</h2>
+                        <h2>Проектирование</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <a href="#" class="btn-custom">Read more</a>
+                        <a href="#" class="btn-custom">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -118,9 +120,9 @@
                     <div class="img" style="background-image: url(images/services-2.jpg);"></div>
                     <div class="text">
                         <div class="icon"><span class="flaticon-worker"></span></div>
-                        <h2>Renovation</h2>
+                        <h2>Ремонт</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <a href="#" class="btn-custom">Read more</a>
+                        <a href="#" class="btn-custom">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -129,9 +131,9 @@
                     <div class="img" style="background-image: url(images/services-3.jpg);"></div>
                     <div class="text">
                         <div class="icon"><span class="flaticon-hammer"></span></div>
-                        <h2>Construction</h2>
+                        <h2>Производство и монтаж</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <a href="#" class="btn-custom">Read more</a>
+                        <a href="#" class="btn-custom">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +160,7 @@
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-engineer"></span></div>
                             <div class="text">
                                 <strong class="number" data-number="48000">0</strong>
-                                <span>Project Completed</span>
+                                <span>Завершенных заказов</span>
                             </div>
                         </div>
                     </div>
@@ -167,7 +169,7 @@
                             <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-worker-1"></span></div>
                             <div class="text">
                                 <strong class="number" data-number="54900">0</strong>
-                                <span>Happy Customers</span>
+                                <span>Довольных клиентов</span>
                             </div>
                         </div>
                     </div>
@@ -181,8 +183,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 text-center heading-section ">
-                <span class="subheading">Our Global Work Industries</span>
-                <h2 class="mb-4">Latest Projects</h2>
+                <span class="subheading">Мы производим и поставляем</span>
+                <h2 class="mb-4">Cовременные теплицы нового поколения</h2>
             </div>
         </div>
         <div class="row">
@@ -355,8 +357,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-10 heading-section text-center ">
-                <span class="subheading">Our Blog</span>
-                <h2 class="mb-4">Latest Blog Updates</h2>
+                <span class="subheading">Наш блог</span>
+                <h2 class="mb-4">Новости сферы производства теплиц</h2>
             </div>
         </div>
         <div class="row d-flex">
