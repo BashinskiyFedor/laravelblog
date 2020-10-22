@@ -12,6 +12,7 @@
 					<p class="mb-0 d-flex">
 						<a href="https://vk.com/teplichnyydvorik" class="d-flex align-items-center justify-content-center"><span class="fa fa-vk"><i class="sr-only">VK</i></span></a>
 						<a href="https://www.instagram.com/teplichnyydvorik/" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+						<a href="https://ok.ru/teplichny.dvorik" class="d-flex align-items-center justify-content-center"><span class="fa fa-odnoklassniki"><i class="sr-only">OK</i></span></a>
 					</p>
 				</div>
 			</div>
