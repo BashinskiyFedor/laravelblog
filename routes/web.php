@@ -42,3 +42,8 @@ Route::group($groupData, function () {
         ->except(['show'])
         ->names('blog.admin.posts');
 });
+
+Route::group(['namespace' => 'API\V1\Blog\Admin', 'name' => 'api.v1.', 'prefix' => 'api/v1', 'as' => 'api.v1'], function () {
+    Route::ApiResource('/posts', 'PostController');
+    Route::ApiResource('/category', 'CategoryController');
+});

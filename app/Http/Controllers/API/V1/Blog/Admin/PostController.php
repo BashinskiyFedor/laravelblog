@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Blog\Admin;
+namespace App\Http\Controllers\API\V1\Blog\Admin;
 
 use App\Repositories\BlogPostRepository;
 use App\Repositories\BlogCategoryRepository;
 use Illuminate\Http\Request;
-
+use Illuminate\Http\JsonResponse;
 use App\Http\Requests\BlogPostUpdateRequest;
 use App\Http\Requests\BlogPostCreateRequest;
+use App\Http\Controllers\API\BaseController;
 
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+
 use App\Models\BlogPost;
 
 class PostController extends BaseController
@@ -25,27 +27,15 @@ class PostController extends BaseController
     }
 
     /**
-     * Display a listing of the resource.
+     * Список банков
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
         $paginator = $this->blogPostRepository->getAllWithPaginate();
-        return view('blog.admin.posts.index', compact('paginator'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $item = new BlogPost();
-        $categoryList = $this->blogCategoryRepository->getForComboBox();
-
-        return view('blog.admin.posts.edit', compact('item', 'categoryList'));
+        return customResponse(200, compact('paginator'));
     }
 
     /**
@@ -59,13 +49,7 @@ class PostController extends BaseController
         $data = $request->input();
         $item = (new BlogPost())->create($data);
 
-        if ($item) {
-            return redirect()->route('blog.admin.posts.edit', [$item->id])
-                                ->with(['success' => 'Успешно сохранено']);
-        } else {
-            return back()->withErrors(['msg' => 'Ошибка сохранения'])
-                            ->withInput();
-        }
+        return customResponse(201, compact('item'));
     }
 
     /**
@@ -76,25 +60,15 @@ class PostController extends BaseController
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
         $item = $this->blogPostRepository->getEdit($id);
         if (empty($item)) {
             abort(404);
         }
 
         $categoryList = $this->blogCategoryRepository->getForComboBox();
-        return view('blog.admin.posts.edit', compact('item', 'categoryList'));
+        return customResponse(200, compact('item', 'categoryList'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -126,11 +100,10 @@ class PostController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogPost $blogPost)
+    public function destroy($id)
     {
-        if (!$blogPost->delete())
-            return customResponse(400);
+        $result = BlogPost::destroy($id);
 
-        return customResponse(200);
+        return customResponse(200, compact('result'));
     }
 }
