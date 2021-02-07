@@ -1,0 +1,59 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    memcached:
+      image: memcached:alpine
+      container_name: b-memcached
+
+    postgres:
+      build: docker/postgres
+      container_name: b-postgres
+      user: root
+      working_dir: /application
+      volumes:
+        - ./:/application
+        - pgdata:/var/lib/postgresql/data
+      environment:
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=blog
+        - PGDATA=/tmp
+      ports:
+        - "10082:5432"
+      restart: always
+
+    webserver:
+      build: docker/nginx
+      container_name: b-webserver
+      user: root
+      working_dir: /application
+      volumes:
+        - ./:/application
+        - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+        - "10083:80"
+      restart: always
+
+
+    php-fpm:
+      build: docker/php-fpm
+      container_name: b-php
+      working_dir: /application
+      volumes:
+        - ./:/application
+        - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
+      restart: always
+
+
+volumes:
+  pgdata:
+  db:
+
+# networks:
+#   default:
+#     driver: bridge
+  # second_default:
+  #   external: true
